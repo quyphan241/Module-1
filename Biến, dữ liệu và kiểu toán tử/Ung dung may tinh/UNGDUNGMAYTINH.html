@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <input name="value1" type="number" id="value1"></input>
+            <input name="value2" type="number" id="value2"></input>
+        </tr>
+        <tr>
+            <th>
+                <input type="submit" value="Addtion(+)" onclick="add()"></input>
+                <input type="submit" value="Subtraction(-)" onclick="sub()"></input>
+                <input type="submit" value="Multiplication(X)" onclick="mul()"></input>
+                <input type="submit" value="Divition(/)" onclick="div()"></input>
+            </th>
+        </tr>
+        <tr>
+            <td colspan="3" id="result"></td>
+        </tr>
+    </table>
+    <script>
+        function add() {
+            var inputValue1 = parseInt(document.getElementById("value1").value);
+            var inputValue2 =parseInt( document.getElementById("value2").value);
+            var A =inputValue1 + inputValue2;
+            document.getElementById("result").innerHTML = "Result Addtion: " + A;
+        }
+        function sub() {
+            var inputValue1 = parseInt(document.getElementById("value1").value);
+            var inputValue2 =parseInt( document.getElementById("value2").value);
+            var S = inputValue1 - inputValue2;
+            document.getElementById("result").innerHTML = "Result Subtraction: " + S;
+        }
+        function mul() {
+            var inputValue1 = parseInt(document.getElementById("value1").value);
+            var inputValue2 =parseInt( document.getElementById("value2").value);
+            document.getElementById("result").innerHTML = "Result Multiplication: " + inputValue1 * inputValue2;
+        }
+        function div() {
+            var inputValue1 = parseInt(document.getElementById("value1").value);
+            var inputValue2 =parseInt( document.getElementById("value2").value);
+            document.getElementById("result").innerHTML = "Result Divition: " + inputValue1 / inputValue2;
+        }
+    </script>
+</body>
+
+</html> 

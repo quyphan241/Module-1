@@ -1,0 +1,50 @@
+</head>
+<body>
+    <table style="width:40%;" >
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <th>
+                <input name="money" type="number" id="number" value="1"></input>
+            </th>
+            <th>
+                <select id="choose1" style="width:80%;">
+                    <option value="VND" >VietNam</option>
+                    <option value="$" >USD</option>
+                </select>
+            </th>
+            <th>
+                    <select id="choose2" style="width:80%;">
+                        <option value="VND">VietNam</option>
+                        <option value="$">USD</option>
+                    </select>
+            </th>
+            <th>
+                <input type="submit" value="convert" onclick="myFunction()"></input>
+            </th>
+        </tr>
+        <tr>
+            <td colspan="3" id="result"></td>
+        </tr>
+    </table>
+    <script>
+        function myFunction(){
+            var inputMoney=document.getElementById("number").value;
+            var choose1=document.getElementById("choose1").value;
+            var choose2=document.getElementById("choose2").value;
+            if (choose1==="VND"&& choose2==="$"){
+                document.getElementById("result").innerHTML="Result: "+inputMoney/23000 +" USD";
+            }else if (choose1==="$"&& choose2==="VND"){
+                document.getElementById("result").innerHTML="Result: "+inputMoney*23000+" VND";
+            }else if (choose1==="VND"){
+                document.getElementById("result").innerHTML="Result: "+inputMoney+" VND";
+            }else
+                document.getElementById("result").innerHTML="Result: "+inputMoney+" USD";
+            
+        }
+    </script>
+</body>
+</html> 

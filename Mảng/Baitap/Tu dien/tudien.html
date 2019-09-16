@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dictionary</title>
+</head>
+<body>
+    <input type="text" id='txt'>
+    <input type="button" value="Translate" onclick="trans();">
+    <script> 
+        let english = ["one", "two", "three" , "four", "five"];
+        let vietnamese = ["một", "hai", "ba", "bốn", "năm"];       
+        function trans(){
+            let word = document.getElementById("txt").value;
+            for (let i = 0; i < english.length;i++){
+                if (english[i] == word){
+                    alert(vietnamese[i]);
+                }
+                else {alert("Not found")}
+            }
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bank interest calcuateor</title>
+</head>
+<body>
+    <script> 
+        let interest = parseFloat(prompt("Enter the interest(%/month):"));
+        let loan = parseFloat(prompt("Enter the loan:"));
+        let month = parseInt(prompt("Enter the number of months to borrow:"));
+        text = "";
+        for (i=1;i<month;i++){
+            loan = loan + loan * interest / 100;
+        }
+        loan = loan / month;
+        text = text + loan;
+        document.write("amount to pay monthly:" + text);
+    </script>
+</body>
+</html>

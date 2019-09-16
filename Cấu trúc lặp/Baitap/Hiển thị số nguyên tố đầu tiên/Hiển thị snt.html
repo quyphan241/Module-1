@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PrimeNumber</title>
+</head>
+
+<body>
+    <script>
+        let num = parseInt(prompt("Enter the number of Prime Numbers to print: "))
+        function check_prime(num) {
+            let N = 2;
+            let count = 0;
+            let txt = "";
+            for (N; ; N++) {
+                let count = 0;
+                for (let i = 2; i <= N; i++) {
+                    if (N % i == 0) {
+                        count += 1;
+                    }
+                }
+                if (count == 1) {
+                    txt = txt + N + " ";
+                    count += 1;
+                }
+                if (count == num) {
+                    document.write(txt);
+                    break;
+                }
+               
+            }
+        } check_prime(num);
+    </script>
+</body>
+
+</html>

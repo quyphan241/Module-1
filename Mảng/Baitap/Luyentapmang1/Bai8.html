@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+       let n = parseInt(prompt("Enter the number of elements of array:"))
+       let arr = [];
+       for (i=0;i<n;i++){
+           let value = Math.floor(Math.random()*100 +1);
+           arr[i] = value;
+       }
+       document.write("The random arry is: " + arr +  "</br>");
+       arr.sort(function(a,b){return b-a});
+        document.write("The array after sorting: " + arr);
+    </script>
+</body>
+</html> 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        function createArray(n){
+            let array= [];
+            for (let i=0; i<n ; i++){
+                array[i]=Math.floor(Math.random()*100 + 1);
+            }
+            return array;
+        }
+        function showArray(array,n){
+            for (let i=0;i<n;i++){
+                document.write(array[i] + " ");
+            }
+        }
+        function isPrime(number){
+            for (let i=2;i<number;i++){
+                let check = number%i;
+                if (check ===0){
+                return false;
+                }
+            }
+            return true;    
+        }
+        function countPrime(array,n){
+            let count =0;
+            createArray(n);
+            for (i=0;i<n;i++){
+                if (isPrime(array[i]))
+                    count+=1;
+            }
+            return count;              
+        }
+        function main(){
+            let array=createArray(n);
+            showArray(array,n);
+            document.write("</br> There is " +countPrime(array) +" prime number in array");
+        }
+        let n=parseInt(prompt("Enter a number"));
+        main();  
+    </script>
+</body>

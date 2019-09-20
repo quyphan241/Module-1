@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        function checkPrime(number){
+            for  (let i = 2; i < number; i++){
+                let check = number%i;
+                if (check==0){
+                    return false;
+                }    
+            }
+            return true;
+        }
+        function printPrime(n){
+            for (let i=2;i<n;i++){
+            if (checkPrime(i)){
+                document.write(i + " ");
+            }
+        }
+        }
+        printPrime(10000);
+
+      
+    </script>
+</body>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    Feet:
+    <input type = "number" id="meter" oninput="convertFeetToMeter(this.value)">
+    <p>Meter:<span id="outputFeet"></span></p>
+    </br>
+    Meter:
+    <input type = "number" id="feet" oninput="convertMeterToFeet(this.value)">
+    <p>Feet:<span id="outputMeter"></span></p>
+    <script>
+       function convertFeetToMeter(a){
+            let meter=a*3.279;
+            document.getElementById("outputFeet").innerHTML=meter;   
+       }
+       function convertMeterToFeet(a){
+            let feet = a*0.305;
+            document.getElementById("outputMeter").innerHTML=feet;   
+       }
+    </script>
+</body>

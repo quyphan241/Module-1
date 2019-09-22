@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body onload=check();>   
+    <script>
+        let arr1 = ["Polaris", "Aldebaran", "Deneb","Vega","Altair","Dubhe","Regulus"];
+        let arr2 = ["Ursa Minor", "Taururus", "Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+        function check(){
+            let count = 0;
+            let a = prompt("Nhap ten mot chom sao");
+            for (i=0;i<arr1.length;i++){
+                if (a == arr1[i]){
+                    document.write("Ngoi sao" +a+" nam trong chom sao "+ arr2[i]);
+                    break;
+                }
+                else
+                    count++;               
+            }
+            if (count == arr1.length)
+                alert("Not found");
+        }        
+    </script>
+</body>

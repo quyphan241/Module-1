@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+       function createArray(n){       
+            arr=[];
+            for(i=0;i<n;i++){
+                 arr[i]=parseInt(prompt("Enter value"));    
+                }
+        }
+        function reverseArray(arr){
+            arr.reverse();
+        }
+        let n= parseInt(prompt("Enter the length of the array"));
+        createArray(n);
+        document.write(arr +"<br>");
+        reverseArray(arr);
+        document.write(arr);
+    </script>
+</body>

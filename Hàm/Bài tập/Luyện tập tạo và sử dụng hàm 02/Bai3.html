@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        function factorial(x){
+            let a=1
+            for (i=1;i<=x;i++){
+                a=a*i;
+            }
+            return a;
+        }
+    let b = factorial(parseInt(prompt("Enter a number:")));
+    document.write("Factorial is " +b);
+    </script>
+</body>

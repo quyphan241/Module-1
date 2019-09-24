@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        let Temperature = function(celcius){
+            this.celcius = celcius;
+            this.getCelcius = function(){
+                return celcius;
+            }
+            this.convertFahrenheit = function(){
+                return celcius*9/5 + 32;
+            }
+            this.convertKelvin = function(){
+                return celcius +  273.15;
+            }
+        };
+        let nhietdo = new Temperature(25);
+        document.write("The temperature now is " + nhietdo.getCelcius()+ " Celcius degrees <br>");
+        Kelvin = nhietdo.convertKelvin();
+        document.write("25 Celcius degrees is equal to " + Kelvin + " Kelvin degrees <br>");
+        Fahreheit = nhietdo.convertFahrenheit();
+        document.write("25 Celcius degrees is equal to " + Fahreheit + " Fahreheit degrees <br>");
+    </script>
+</body>

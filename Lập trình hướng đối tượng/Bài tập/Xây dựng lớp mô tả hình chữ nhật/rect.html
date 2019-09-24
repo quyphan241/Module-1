@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Rectangle</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div><canvas id="myCanvas" height="500px" width="800px" style="border:1px solid #d3d3d3;"></canvas> </div>
+    <script>
+        function Rectangle(height, width){
+            this.height = height;
+            this.width = width;
+            this.setHeightWidth = function(height, width){
+                this.height = height;
+                this.width = width;
+            }
+            this.area = function(){
+                return this.height * this.width;
+            }
+            this.perimeter = function(){
+                return 2*(this.height + this.width);
+            }
+            this.draw = function(idCanvas){
+                let  ctx = document.getElementById(idCanvas).getContext("2d");
+                ctx.beginPath();
+                ctx.fillStyle = "pink";
+                ctx.fillRect(200, 200, this.width, this.height);
+            }           
+        }        
+        let hinh = new Rectangle(300,400);
+        document.write("Hinh chu nhat dau tien co chieu cao: " + hinh.height + " va chieu rong " + hinh.width +"<br>")
+        hinh.setHeightWidth(100,200);
+        hinh.draw("myCanvas");
+        document.write("Hinh chu nhat sau khi doi kich thuoc co chieu cao: " + hinh.height + " va chieu rong " + hinh.width +"<br>");
+        document.write("Hinh chu nhat co dien tich " +hinh.area()+ "<br>");
+        document.write("Hinh chu nhat co chu vi " +hinh.perimeter()+ "<br>");
+
+    </script>
+</body>
+
+</html>

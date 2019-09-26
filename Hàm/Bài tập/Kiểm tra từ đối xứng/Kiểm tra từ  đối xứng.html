@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Palindrome</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        function isPalindrome(string){
+            let first = 0;
+            let last = string.length -1;
+            while (first <last){
+                if (string[first] != string[last]){
+                    document.write(string + " is not a palindrome <br>");
+                    break;
+                }
+                else {
+                    first++;
+                    last--;
+                }
+            }
+            if (first>last||first==last)
+                document.write(string +" is a palindrome <br>");
+        }
+        isPalindrome("abbaasdas");
+        isPalindrome("abcba");
+    </script>
+</body>

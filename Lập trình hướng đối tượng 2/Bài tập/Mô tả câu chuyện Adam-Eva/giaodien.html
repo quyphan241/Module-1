@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="Adam-Eva.js"></script>
+</head>
+<body>  
+    <div>
+    <table border="1" width="450px">
+        <tr>
+            <th>Index</th>
+            <th>Adam</th>
+            <th>Eva</th>
+            <th>Apple</th>
+        </tr>
+        <tr>    
+            <td>Weight:</td>    
+            <td><span id="adamweight">70kg</span></td>
+            <td><span id="evaweight">55kg</span></td>
+            <td><span id="appleweight">10</span></td></td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td><span id="adamgender">Adam</span></td>
+            <td><span id="evagender">Eva</span></td>
+            <td></td> 
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" id="adameat" value ="Eat" onclick="adam.eatApple(apple);"></input></td>
+            <td><input type="button" id="evaeat" value ="Eat" onclick="eva.eatApple(apple);"></input></td>
+        </tr>
+        <tr>
+                <td></td>
+                <td><input type="button" id="adamSay" value ="Say" onclick="adam.say();"></input></td>
+                <td><input type="button" id="evaSay" value ="Say" onclick="eva.say();"></input></td>
+        </tr>
+             
+    </table>
+    </div>  
+    <div><p id="conversation"></p></div>
+</body>

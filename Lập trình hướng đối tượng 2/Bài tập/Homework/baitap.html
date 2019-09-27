@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        function Moi(ten,soluong){
+            this.ten = ten;
+            this.soluong = soluong;
+            this.giam = function(){
+                if (this.soluong >0)
+                    this.soluong--;
+                else alert("het roi");
+            }
+            this.info = function(){
+                return soluong;
+            }
+        }
+
+        function Nuoc(ten,soluong){
+            this.ten = ten;
+            this.soluong = soluong;
+            this.giam = function(){
+                if (this.soluong >0)
+                    this.soluong--;
+                else alert("het roi");
+            }
+            this.info = function(){
+                return soluong;
+            }
+        }
+
+        function DanNhau(name){
+            this.name = name;
+        
+        this.an = function(Moi){
+            Moi.giam();
+        }
+        this.uong =function(Nuoc){
+            Nuoc.giam();
+        }
+        }
+        let quy=new DanNhau("Quy");
+        let ga= new Moi("Ga Nuong",20);
+        let huda = new Nuoc("Huda",10);
+        quy.an(ga);
+        document.write(ga.info());
+        quy.uong(huda);
+        document.write(huda.info());
+    </script>
+</body>

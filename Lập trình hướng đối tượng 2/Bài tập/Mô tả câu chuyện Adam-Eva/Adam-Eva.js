@@ -14,8 +14,8 @@
             this.gender = gender;
             this.weight = weight;
             this.eatApple = function(Apple){
-                Apple.decrease();
                 if (Apple.weight>0)
+                    Apple.decrease();              
                     this.weight +=1 ;
                 document.getElementById(this.name + "weight").innerHTML = this.weight + "kg";
                 document.getElementById("appleweight").innerHTML = Apple.weight;

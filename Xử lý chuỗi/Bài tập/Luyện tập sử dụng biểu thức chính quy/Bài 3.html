@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CheckVowel</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        function checkVowel(string){
+            let count =0;
+            for(i=0; i<string.length; i++){
+                if(string[i]=="u"||string[i]=="e"||string[i]=="o"||string[i]=="a"||string[i]=="i"){
+                    count++;
+                }          
+            }
+            document.write("The number of vowel in string is: " + count);
+        }
+        checkVowel("abcee");
+        // function checkVowel(string){
+        //     let regexp=/ueoai/;
+        //     let count =0;
+        //     let result = string.match(regexp);
+        //     document.write(result);
+        // }
+        // checkVowel("abc123");                
+    </script>
+</body>

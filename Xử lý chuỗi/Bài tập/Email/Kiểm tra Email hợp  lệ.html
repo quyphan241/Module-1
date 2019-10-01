@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ValidateEmail</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        function is_ValidateEmail(str) {
+            regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+            if (regexp.test(str)) {
+                return true;
+            } 
+            return false;
+        }
+        let email = "ab@yahoo.com";
+        document.write(is_ValidateEmail(email) + "<br>");
+        email = "ab@gmail.";
+        document.write(is_ValidateEmail(email) + "<br>");
+    </script>
+</body>

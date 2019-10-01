@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bai3</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        let n;
+        do {
+            n = parseInt(prompt("Enter the length of the array:"));
+            if (isNaN(n))
+                alert("Please enter a number");   
+        }
+        while (isNaN(n)||n<0);
+        let arr =[];
+        for (i=0;i<n;i++){
+            arr[i]=prompt("Enter array" + i);
+        }
+        document.write(arr);
+    </script>
+</body>
